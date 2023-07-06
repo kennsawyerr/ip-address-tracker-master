@@ -1,0 +1,17 @@
+body{
+    color: black;
+}
+
+.topscreen{
+    background-image: url(images/pattern-bg-desktop.png);
+}
+
+.navbar{
+    display: flex;
+    justify-content: start;
+    margin: 7px 7px;
+}
+
+.container{
+    width: 80%;
+}
