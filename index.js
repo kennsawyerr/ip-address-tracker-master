@@ -18,7 +18,7 @@
 // .then(res => res.json())
 // .then(data => console.log(data))
 
-const apiKey = '2404506';
+const apiKey = '5363829';
 const ipAddress = '8.8.8.8';
 
 const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${ipAddress}`;
