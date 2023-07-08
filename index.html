@@ -29,27 +29,33 @@
   </style>
 </head>
 <body>
+    <div class="topscreen">
 <div class="container">
-<h1>IP Address Tracker</h1>  
-
+<h1 class="hero-title">IP Address Tracker</h1>  
+ <div class="input">
  <input type="text" placeholder="Search for any IP address or domain"> 
- <div class="topscreen">
-<div class="navbar">
+ </div>
 
-  IP Address
-  Location
-  Timezone
+<div class="navbar">
+  <div>IP Address</div>
+  <div>Location</div>
+  <div>Timezone</div> 
+  <div> ISP</div> 
 </div>
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+    <!-- UTC   -->
+    <!-- add offset value dynamically using the API -->
+ 
   
-  <div class="attribution">
+</div>
+</div>
+<div id="map"></div>
+
+
+
+<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Kehinde</a>.
   </div>
-</div>
-<div id="map"></div>
-</div>
 <script src="index.js"></script>
 </body>
 </html>

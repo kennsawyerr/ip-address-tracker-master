@@ -20,12 +20,19 @@
 
 - Font size (text input): 18px
 
- Font */
+ Font
+ - Weights: 400, 500, 700 */
 
 
   :root{
-    -Very-Dark-Gray: hsl(0, 0%, 17%);
-    -Dark-Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Gray: hsl(0, 0%, 17%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+    --text-color:white;
+    /* font styling */
+    --font-1:400;
+    --font-2:500;
+    --font-3:700;
+    
     
   }
 
@@ -43,10 +50,12 @@
     padding: 0;
   }
 
+
  h1,h2, h3,h4,h5{
     margin: 0;
     padding: 0;
     text-align: center;
+    color: var(-Dark-Gray);
  }
 
  ul{
@@ -57,19 +66,29 @@
   /*  */
 
 body{
-    color: black;
+    color: var(--text-color);
     font-family: 'Rubik', sans-serif;
+}
+
+input{
+    width: 100%;
+    height: 2rem;
+
+
+}
+.input{
+    
+    width: 50%;
+    height: 2rem;
+    margin: 1rem auto;
+    
+
 }
 
 .topscreen{
     background-image: url(images/pattern-bg-desktop.png);
 }
 
-.navbar{
-    display: flex;
-    justify-content: start;
-    margin: 7px 7px;
-}
 
 .container{
     width: 80%;
@@ -79,3 +98,26 @@ body{
 
 
 #map { height: 380px; }
+
+.navbar{
+    display: flex;
+    justify-content: start;
+    border-radius: 50%; 
+    margin: 0;
+}
+.navbar div{
+   background-color: var(--text-color);
+   width: 100%;
+   color: var(--Dark-Gray);
+   height: 8rem;
+   padding: 1rem;
+   text-transform: uppercase;
+   font-size: 0.8rem;
+   border-left: 1px dashed;
+   border-bottom: 3px solid pink;
+}
+
+.hero-title{
+    padding: 30px;
+    font-weight: var(--font-1);
+    }
