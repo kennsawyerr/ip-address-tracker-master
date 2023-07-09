@@ -18,7 +18,29 @@
 // .then(res => res.json())
 // .then(data => console.log(data))
 
-const apiKey = '5363829';
+// last section i remembered 
+
+// const apiKey = '5363829';
+// const ipAddress = '8.8.8.8';
+
+// const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${ipAddress}`;
+
+// fetch(apiUrl)
+//   .then(response => response.json())
+//   .then(data => {
+//     // Handle the API response
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     // Handle any errors
+//     console.error('Error:', error);
+//   });
+
+  //last section ends here
+
+
+
+  const apiKey = '2404506';
 const ipAddress = '8.8.8.8';
 
 const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${ipAddress}`;
@@ -26,13 +48,26 @@ const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=
 fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
-    // Handle the API response
-    console.log(data);
+  
+    displayResponse(data);
   })
   .catch(error => {
-    // Handle any errors
+    
     console.error('Error:', error);
   });
+
+function displayResponse(data) {
+  const responseContainer = document.getElementById('response-container');
+  responseContainer.innerHTML = `
+    <p>IP: ${data.ip}</p>
+    <p>Country: ${data.location.country}</p>
+    <p>Region: ${data.location.region}</p>
+    <p>Timezone: ${data.location.timezone}</p>
+    <p>ISP: ${data.isp}</p>
+    <p>AS Name: ${data.as.name}</p>
+    
+  `;
+}
 
 
 // .then(data => {
