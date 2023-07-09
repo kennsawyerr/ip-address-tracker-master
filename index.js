@@ -40,7 +40,7 @@
 
 
 
-  const apiKey = '2404506';
+  const apiKey = '2404513';
 const ipAddress = '8.8.8.8';
 
 const apiUrl = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${ipAddress}`;
@@ -52,7 +52,7 @@ fetch(apiUrl)
     displayResponse(data);
   })
   .catch(error => {
-    
+    // Handle any errors
     console.error('Error:', error);
   });
 
@@ -65,7 +65,7 @@ function displayResponse(data) {
     <p>Timezone: ${data.location.timezone}</p>
     <p>ISP: ${data.isp}</p>
     <p>AS Name: ${data.as.name}</p>
-    
+    <!-- Add more fields as needed -->
   `;
 }
 
